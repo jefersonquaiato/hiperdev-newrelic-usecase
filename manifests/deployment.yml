@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hiperdev-api
+  namespace: hiperdev
+spec:
+  selector:
+    matchLabels:
+      app: hiperdev-api
+  template:
+    metadata:
+      labels:
+        app: hiperdev-api
+    spec:
+      containers:
+      - name: hiperdev-api
+        image: hiperdevcr.azurecr.io/hiperdev
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
