@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hiperdev-api
+  name: hiperdev-newrelic-usecase
   namespace: hiperdev
 spec:
   selector:
     matchLabels:
-      app: hiperdev-api
+      app: hiperdev-newrelic-usecase
   template:
     metadata:
       labels:
-        app: hiperdev-api
+        app: hiperdev-newrelic-usecase
     spec:
       containers:
-      - name: hiperdev-api
+      - name: hiperdev-newrelic-usecase
         image: hiperdevcr.azurecr.io/hiperdev
         resources:
           limits:
