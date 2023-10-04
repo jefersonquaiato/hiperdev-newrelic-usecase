@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hiperdev-newrelic-usecase
-        image: hiperdevcr.azurecr.io/hiperdev
+        image: hiperdevcr.azurecr.io/hiperdev-newrelic-usecase
         resources:
           limits:
             memory: "128Mi"
